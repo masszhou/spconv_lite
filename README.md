@@ -11,12 +11,16 @@ The work in this repository is mainly involved with following papers:
     * a excellent review with accurate math notation.
 
 
-I made following changes:
+I made following major changes:
 * import and slightly modifed a subset of functions from spconv based on my own need. 
 * refactor source codes
 * fix compiler warning after analysing the source codes and algorihtm
 * use docker container as building/deployment toolchain
 * add my understanding about sparse convolution algorithm
+* analysing kernel functions and performance
+* evaluate with similar functions in the newest pytorch
+
+Github do not support math rendering, this document can be rendered by e.g. MathJax.
 
 # 2. Build
 #### dependencies for usage
@@ -64,7 +68,79 @@ run unittest under `{spconv_lite_root}/unittest`
 python -m test.test_all
 ```
 
-# 3. My Understanding about Sparse Convolution
+# 3. My understanding about sparse convolution
+### 3.1 input
+here we asumme the input siginal is 2D with channel=3, like a image. 2D signal is easier to draw the tensor. There is no essential difference for the convolution between 2D and 3D signals.
 
-# 4. ToDo
-* [ ] add examples
+<img src="./doc/imgs/input_2d.png"  width="400" />
+
+consider a image similar signal, which contains only sparse data.
+P1, P2 are data points. other cells are zeros.
+
+### 3.2 convolution
+
+<img src="./doc/imgs/kernel.png"  width="400" />
+
+notation:
+* different color means different input channels
+* dark and light colors means different output channels
+
+### 3.3 output and active sites
+
+<img src="./doc/imgs/output.png"  width="300" />
+
+notation:
+* dark and light colors means different output channels
+* **A1** means acitve site, convolution result from **P1**
+* **A2** means acitve site, convolution result from **P2**
+* **A1A2"** means acitve site, the sum of convolution results from **P1**, **P2**
+
+as we can see from the figure. the output is also sparse.
+there are two kinds of definitions, which proposed by [3D Semantic Segmentation with Submanifold Sparse Convolutional Networks](https://arxiv.org/abs/1711.10275)
+* native sparse output, just like normal convolution, take all the output sites as results, as long as kernel covers input sites.
+* submanifold output, the convolution output are only when the kernel center covers the input points.
+  
+In the program, we can choose either of these definitions, depends on the application.
+
+### 3.4 build hash-table
+
+<img src="./doc/imgs/build_hashtable.png"  width="600" />
+
+* to build $Hash_{in}$
+  * $V_{in}$ is counter index
+  * $key_{in}$ is x,y order position index in image
+* to build $Hash_{out}$, see picture.
+* key and v are both unique value
+
+### 3.5 build rulebook
+
+<img src="./doc/imgs/build_rulebook.png"  width="900" />
+
+* **rulebook** recorded every atomic operation during the convolution with index, with the help from **hash-table**
+* **rulebook** is major indexed by **kernel** elements.
+
+### 3.6 Sparse Convolution
+
+<img src="./doc/imgs/spconv.png"  width="1200" />
+
+* the programm run through instructions flow, i.e. loop the **rulebook**.
+
+# 4. ToDos
+* [ ] add more examples
+* [ ] add explanation and illustration for cuda kernel
+* [ ] compare with SparseConv operations from the most recent pytorch e.g. 1.6+, which is already major updated
+
+# Author
+
+* Zhiliang Zhou, [Linkedin](https://www.linkedin.com/in/zhiliang-zhou/)
+
+# License
+The project is derived from [spconv](https://github.com/traveller59/spconv)
+
+The [spconv](https://github.com/traveller59/spconv) code is licensed under Apache-2.0 License
+The [CUDPP](https://github.com/cudpp/cudpp) hash code is licensed under BSD License.
+The [robin-map](https://github.com/Tessil/robin-map) code is licensed under MIT license.
+
+Besides, if you want directly use any of the figures for algorithm explanation, which were my original works and could be used in my future publications, so please cite this repo for these figures. 
+
+Thanks
