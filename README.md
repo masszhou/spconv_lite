@@ -21,6 +21,7 @@ I made following major changes:
 * evaluate with similar functions in the newest pytorch
 
 Github do not support math rendering, this document can be rendered by e.g. MathJax.
+
 this library has been used in my repo [second_lite](https://github.com/masszhou/second_lite)
 
 Results
