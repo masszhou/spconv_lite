@@ -22,6 +22,12 @@ I made following major changes:
 
 Github do not support math rendering, this document can be rendered by e.g. MathJax.
 
+this library has been used in my repo [second_lite](https://github.com/masszhou/second_lite)
+
+Results
+* KITTI [2011-09-26-0005](https://youtu.be/p5ZlXYoMb5o)
+* KITTI [2011 09 26 0023](https://youtu.be/fRAjDE7FdDQ)
+
 # 2. Build
 #### dependencies for usage
 * python 3.8
