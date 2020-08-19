@@ -24,7 +24,7 @@ Github do not support math rendering, this document can be rendered by e.g. Math
 
 this library has been used in my repo [second_lite](https://github.com/masszhou/second_lite)
 
-Results
+My results
 * KITTI [2011-09-26-0005](https://youtu.be/p5ZlXYoMb5o)
 * KITTI [2011 09 26 0023](https://youtu.be/fRAjDE7FdDQ)
 
