@@ -12,7 +12,7 @@ The work in this repository is mainly involved with following papers:
 
 
 I made following major changes:
-* import and slightly modifed a subset of functions from spconv based on my own need. 
+* import and modifed a subset of functions from spconv based on my own need. 
 * refactor source codes
 * fix compiler warning after analysing the source codes and algorihtm
 * use docker container as building/deployment toolchain
