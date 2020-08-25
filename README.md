@@ -1,5 +1,5 @@
 # 1. Introduction
-Spconv_lite is a simplied version for [spconv project](https://github.com/traveller59/spconv) by Yan Yan
+Spconv_lite is a simple version for [spconv project](https://github.com/traveller59/spconv) by Yan Yan
 
 The work in this repository is mainly involved with following papers:
 * [3D Semantic Segmentation with Submanifold Sparse Convolutional Networks](https://arxiv.org/abs/1711.10275)
