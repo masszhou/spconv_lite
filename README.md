@@ -30,11 +30,11 @@ My results
 
 # 2. Build
 #### dependencies for usage
-* python 3.8
-* pytorch 1.6.0
+* python 3.8 
+* pytorch 1.6.0 with cuda 10.2
 * tqdm (for progressbar in unittest)
 * numpy
-
+* cmake 3.15
 
 #### build with docker container
 
