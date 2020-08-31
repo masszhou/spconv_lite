@@ -36,6 +36,11 @@ My results
 * numpy
 * cmake 3.15
 
+#### build with cmake
+```bash
+python setup.py bdist_wheel
+```
+
 #### build with docker container
 
 pull the builder container
