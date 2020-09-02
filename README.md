@@ -3,12 +3,12 @@ Spconv_lite is a simplified version of [spconv project](https://github.com/trave
 
 The work in this repository is mainly involved with following papers:
 * [3D Semantic Segmentation with Submanifold Sparse Convolutional Networks](https://arxiv.org/abs/1711.10275)
-  * the sparse convolution and active sites concept was proposed.
+  * the sparse convolution and active sites concept was firstly in pucblic proposed.
 *  [SECOND: Sparsely Embedded Convolutional Detection](https://pdfs.semanticscholar.org/5125/a16039cabc6320c908a4764f32596e018ad3.pdf)
    * a significant performance improvement for sparse convolution was proposed. 
    * the author shared their excellent implementation, which named spconv.
 * [Three-dimensional Backbone Network for 3D Object Detection in Traffic Scenes](https://arxiv.org/abs/1901.08373)
-    * a excellent review with accurate math notation.
+    * an excellent review with accurate math notations.
 
 
 I made following major changes:
