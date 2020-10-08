@@ -1,5 +1,7 @@
 # 1. Introduction
-a light weight version of [spconv project](https://github.com/traveller59/spconv) by Yan Yan
+Implementation of sparse convolution is quite different from traditional dense convolution in GPU level.
+
+this project is a lightweight version of [spconv project](https://github.com/traveller59/spconv) by Yan Yan
 
 The work in this repository is mainly involved with following papers:
 * [3D Semantic Segmentation with Submanifold Sparse Convolutional Networks](https://arxiv.org/abs/1711.10275)
