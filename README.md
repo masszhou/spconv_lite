@@ -1,5 +1,5 @@
 # 1. Introduction
-Spconv_lite is a simplified version of [spconv project](https://github.com/traveller59/spconv) by Yan Yan
+a light weight version of [spconv project](https://github.com/traveller59/spconv) by Yan Yan
 
 The work in this repository is mainly involved with following papers:
 * [3D Semantic Segmentation with Submanifold Sparse Convolutional Networks](https://arxiv.org/abs/1711.10275)
@@ -14,10 +14,10 @@ The work in this repository is mainly involved with following papers:
 I made following major changes:
 * import and modifed a subset of functions from spconv based on my own need. 
 * refactor source codes
-* fix compiler warning after analysing the source codes and algorihtm
-* use docker container as building/deployment toolchain
+* fix errors and all compiler warning
 * add my understanding about sparse convolution algorithm
 * analysing kernel functions and performance
+* optimize convolution process
 * evaluate with similar functions in the newest pytorch
 
 Github do not support math rendering, this document can be rendered by e.g. MathJax.
