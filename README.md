@@ -30,6 +30,8 @@ My results
 * KITTI [2011-09-26-0005](https://youtu.be/p5ZlXYoMb5o)
 * KITTI [2011 09 26 0023](https://youtu.be/fRAjDE7FdDQ)
 
+I wrote a article to explain [how sparse convolution works](https://towardsdatascience.com/how-does-sparse-convolution-work-3257a0a8fd1). 
+
 # 2. Build
 #### dependencies for usage
 * python 3.8 
