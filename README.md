@@ -1,6 +1,8 @@
-# 1. Introduction
+# Update
+I wrote a article to explain [how sparse convolution works](https://towardsdatascience.com/how-does-sparse-convolution-work-3257a0a8fd1) with detail. 
 
-**Update** I wrote a article to explain [how sparse convolution works](https://towardsdatascience.com/how-does-sparse-convolution-work-3257a0a8fd1). 
+
+# 1. Introduction
 
 Implementation of sparse convolution is quite different from traditional dense convolution in GPU level.
 
